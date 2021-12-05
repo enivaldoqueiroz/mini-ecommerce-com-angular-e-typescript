@@ -1,4 +1,22 @@
 <div class="conteiner panel panel-default espaco">
-  <app-loja></app-loja>
-  <app-estoque></app-estoque>
+
+  <!-- Navegação-->
+  <div class="row">
+
+    <!-- Logo da loja-->
+    <div class="col-sm-6 col-xs-12">
+        <img src="../assets/icon_logo_organic_food.png" alt="">
+    </div>
+    <!-- Botõe da loja e Estoque-->
+    <div class="col-sm-6 col-xs-12 text-right">
+        
+        <div class="text-right">
+          <button (click)="MostrarLoja()" class="btn btn-primary btn-size">Loja</button>
+          <button (click)="MostrarEstoque()" class="btn btn-primary btn-size">Estoque</button>
+        </div>
+        
+    </div>
+  </div>
+  <app-loja *ngIf="lojaVisivel" ></app-loja>
+  <app-estoque *ngIf="estoqueVisivel"></app-estoque>
 </div>
