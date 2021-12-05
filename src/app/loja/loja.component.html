@@ -2,12 +2,20 @@
     <!--Titulo-->
     <div class="row"><h3>Área do Cliente</h3></div>
     <!--Conteudo Dinamico-->
-
+    <div class="row">
+        <i *ngFor="let produto of produtos" >
+           <div class="col-xs-3">
+               <img src="assets/{{ produto.icon }}" alt=""><span>{{ produto.nome }}</span>
+           </div> 
+        </i>
+    </div>
     <!--Botçoes-->
     <div class="row text-right">
-       <button class="btn btn-defaul">Bananas</button>
-       <button class="btn btn-defaul">Maca</button>
-       <button class="btn btn-defaul">Cenoura</button>
+        <button (click)="AdicinarAbacate()" class="btn btn-defaul">+ Abacate</button>
+        <button (click)="AdicinarAlface()" class="btn btn-defaul">+ Alface</button>
+        <button (click)="AdicinarBananas()"  class="btn btn-defaul">+ Bananas</button>
+        <button (click)="AdicinarCenoura()" class="btn btn-defaul">+ Cenoura</button>
+        <button (click)="AdicinarMaca()" class="btn btn-defaul">+ Maca</button>
     </div>
     
 </div>
